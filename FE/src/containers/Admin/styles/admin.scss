@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+}
+
+.top-bar {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(196, 226, 252);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  .bar-wrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .top-left {
+      .logo {
+        font-weight: bold;
+        font-size: 30px;
+        color: darkblue;
+      }
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      .icon-container {
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
+        .noti-bag {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: -5px;
+          right: 0px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+        }
+      }
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.side-bar {
+  flex: 1;
+  height: calc(100vh -50px);
+  position: sticky;
+  top: 50px;
+  background-color: azure;
+  .bar-wrapper {
+    padding: 20px;
+    color: #555;
+    .bar-menu {
+      margin-bottom: 10px;
+      .menu-title {
+        font-size: 14px;
+      }
+      .menu-list {
+        list-style: none;
+        padding: 5px;
+        .menu-item {
+          padding: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+
+          .icon {
+            margin-right: 5px;
+            font-size: 20px;
+          }
+        }
+
+        .menu-item.active,
+        .menu-item:hover {
+          background-color: lightblue ;
+        }
+      }
+    }
+  }
+}
+
+
+.home {
+  flex: 6;
+  padding-top: 10px;
+  .featured {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .featured-item {
+      flex: 1;
+      margin: 0 20px;
+      padding: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .title {
+        font-size: 20px;
+      }
+
+      .money-container {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+
+        .money {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        .money-rate {
+          display: flex;
+          align-items: center;
+          margin-left: 20px;
+
+          .down-icon {
+            font-size: 20px;
+            margin-left: 5px;
+            color: red;
+          }
+
+          .up-icon {
+            font-size: 20px;
+            margin-left: 5px;
+            color: rgb(15, 219, 15);
+          }
+        }
+      }
+
+      .sub {
+        font-size: 15px;
+        color: gray
+      }
+    }
+  }
+}
+
+
+.chart {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .chart-title {
+    margin-bottom: 20px;
+  }
+}

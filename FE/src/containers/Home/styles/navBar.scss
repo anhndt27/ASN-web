@@ -1,0 +1,38 @@
+.nav-bar {
+    border-bottom: grey 1px solid;
+    .container-nav {
+      height: auto;
+      .wrapper-nav {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .logo {
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+          .name-logo {
+            font-weight: bold;
+            font-size: 40px;
+            color: rgb(0, 162, 255);
+          }
+  
+          .store-logo {
+            font-size: 40px;
+            font-weight: bold;
+          }
+        }
+  
+        .shopping-cart {
+          display: flex;
+          justify-content: flex-end;
+  
+          .account {
+            margin-right: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }

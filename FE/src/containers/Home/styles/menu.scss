@@ -1,0 +1,42 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    .menu-wrapper {
+      display: flex;
+      margin: 10px 0;
+      .menu-item {
+        display: inline-block;
+        position: relative;
+        padding: 5px 5px;
+        margin: 0 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+      }
+  
+      .menu-item:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: black;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+  
+      .menu-item:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+    }
+  }
+  
+
+  .banner {
+    img {
+      width: 100%;
+    }
+  }

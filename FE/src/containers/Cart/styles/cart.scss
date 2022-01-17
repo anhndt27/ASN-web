@@ -1,0 +1,118 @@
+.cart {
+  .wrapper {
+    padding: 30px;
+    h1 {
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+
+      .continue-shopping {
+        padding: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .checkout {
+        padding: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: black;
+        border: none;
+        color: white;
+      }
+    }
+
+    .text {
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 0px 10px;
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+
+      .info {
+        flex: 3;
+
+        .product-cart {
+          display: flex;
+          justify-content: space-between;
+
+          .product-detail-cart {
+            flex: 2;
+            display: flex;
+
+            .image {
+              width: 200px;
+            }
+
+            .detail {
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+            }
+          }
+
+          .price-detail {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .product-amount-container {
+              display: flex;
+              align-items: center;
+              margin-bottom: 20px;
+
+              .product-amount {
+                font-size: 24px;
+                margin: 5px;
+              }
+            }
+
+            .product-price {
+              font-size: 24px;
+              margin: 5px;
+            }
+          }
+        }
+      }
+
+      .summary {
+        flex: 1;
+        border: 0.5px solid lightgray;
+        border-radius: 10px;
+        padding: 20px;
+        height: 50vh;
+
+        .summary-title {
+          font-weight: 200;
+        }
+
+        .summary-item {
+          margin: 30px 0px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .summary-item-total {
+          margin: 30px 0px;
+          display: flex;
+          justify-content: space-between;
+          font-weight: 500;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
