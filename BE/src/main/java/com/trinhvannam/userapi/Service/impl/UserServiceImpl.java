@@ -35,4 +35,5 @@ public class UserServiceImpl implements UserService {
     public List<User> findUserByEmail(String email) {
         return userRepositoryCustom.findUserByEmail(email);
     }
+
 }

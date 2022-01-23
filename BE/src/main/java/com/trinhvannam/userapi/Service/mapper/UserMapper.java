@@ -17,6 +17,5 @@ public class UserMapper {
         user.setUserPhone(userDTO.getUserPhone());
         user.setAdmin(false);
         return user;
-
     }
 }
