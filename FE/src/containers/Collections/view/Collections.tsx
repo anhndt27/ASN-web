@@ -6,11 +6,14 @@ import Menu from "../../Home/components/Menu"
 import Footer from "../../Home/components/Footer"
 import { popularProducts } from "../../../services/fakeData"
 import ProductDetail from "../../../components/ProductDetail/views/ProductDetail"
+import useCollections from "../hook/useCollections"
 
 const Collections = () => {
   useEffect(() => {
     document.title = "All Collections"
   })
+
+  const {productsData} = useCollections()
   return (
     <div className="collections">
       <Announcement />
@@ -55,8 +58,8 @@ const Collections = () => {
         </div>
       </div>
       <div className="collections-container">
-        {popularProducts.map((i: any) => (
-          <ProductDetail img={i.img} id={i.id} />
+        {!!productsData && productsData.map((i: any) => (
+          <ProductDetail img={i.productImgURL} id={i.id} />
         ))}
       </div>
       <Footer />

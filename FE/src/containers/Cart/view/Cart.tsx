@@ -6,7 +6,7 @@ import NavBar from "../../Home/components/NavBar"
 import Menu from "../../Home/components/Menu"
 import Footer from "../../Home/components/Footer"
 import { Add, Remove } from "@mui/icons-material"
-import { useNavigate } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 const ProductColor = styled.div`
   width: 20px;
@@ -22,7 +22,7 @@ const Hr = styled.hr`
 `
 
 const Cart = () => {
-  const navigate = useNavigate()
+  const history = useHistory()
   return (
     <div className="cart">
       <Announcement />
@@ -33,7 +33,7 @@ const Cart = () => {
       <div className="wrapper">
         <h1>YOUR BAG</h1>
         <div className="top">
-          <button className="continue-shopping" onClick={() => navigate("/collections")}>CONTINUE SHOPPING</button>
+          <button className="continue-shopping" onClick={() => history.push("/collections")}>CONTINUE SHOPPING</button>
           <div>
             <span className="text">Shopping Bag(2)</span>
             <span className="text">Your Wishlist (0)</span>

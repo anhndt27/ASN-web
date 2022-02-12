@@ -4,7 +4,7 @@ import { Grid } from "@mui/material"
 import SearchIcon from "@mui/icons-material/Search"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 interface ProductProps {
@@ -14,10 +14,10 @@ interface ProductProps {
   cost?: string
 }
 
-const ProductDetail = ({ id, img, name, cost }: ProductProps) => {
-  const navigate = useNavigate()
+const ProductDetail = ({ id, img }: ProductProps) => {
+  const history = useHistory()
   const open = () => {
-    navigate(`/product/${id}`)
+    history.push(`/product/${id}`)
   }
   return (
     <div className="product-detail">

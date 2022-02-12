@@ -5,10 +5,10 @@ import LanguageIcon from "@mui/icons-material/Language"
 import SearchIcon from "@mui/icons-material/Search"
 import Badge from "@mui/material/Badge"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const NavBar = () => {
-  const navigate = useNavigate()
+  const history = useHistory()
   return (
     <div className="nav-bar">
       <div className="container-nav">
@@ -17,7 +17,7 @@ const NavBar = () => {
             <LanguageIcon />
             <SearchIcon />
           </Grid>
-          <Grid item xs={4} className="logo" onClick={() => navigate("/home")}>
+          <Grid item xs={4} className="logo" onClick={() => history.push("/home")}>
             <Typography className="name-logo">ASN</Typography>
             <Typography className="store-logo">Store</Typography>
           </Grid>
@@ -27,10 +27,10 @@ const NavBar = () => {
                 Register
               </Button>
 
-              <Button variant="text" className="account" onClick={()=> navigate("/login")}>
+              <Button variant="text" className="account" onClick={()=> history.push("/login")}>
                 Login
               </Button>
-              <ShoppingCartIcon onClick={() => navigate("/cart")} sx={{ cursor: "pointer" }}/>
+              <ShoppingCartIcon onClick={() => history.push("/cart")} sx={{ cursor: "pointer" }}/>
             </Badge>
           </Grid>
         </Grid>

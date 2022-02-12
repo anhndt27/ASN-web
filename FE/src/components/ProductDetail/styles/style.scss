@@ -1,13 +1,14 @@
 .product-detail {
     margin: 20px;
+    img {
+        object-fit: fill;
+    }
     .product-card {
       width: 100%;
       max-width: 400px;
       height: auto;
   
-      img {
-          width: 100%;
-      }
+     
   
       .name {
           font-size: 20px !important;

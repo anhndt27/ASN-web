@@ -1,6 +1,4 @@
-.container {
-  display: flex;
-}
+
 
 .top-bar {
   width: 100%;
@@ -163,4 +161,47 @@
   .chart-title {
     margin-bottom: 20px;
   }
+}
+
+
+.dashboard {
+  .container {
+
+    .wrapper {
+      width: 100%;
+      margin-top: 20px;
+      .wrapper-title {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-left: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.product-management {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.action-dialog {
+  .MuiPaper-root {
+    width: 60vh;
+  }
+}
+
+.img-cell {
+  img {
+    height: 60px;   
+  }
+}
+
+.action-add {
+  display: flex;
 }

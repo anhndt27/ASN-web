@@ -1,5 +1,5 @@
 import React from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import { validateEmail } from "../../../configs/validateEmail"
 import Avatar from "@mui/material/Avatar"
 import Button from "@mui/material/Button"

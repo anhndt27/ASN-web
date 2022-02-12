@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { useParams } from "react-router-dom"
 import "../styles/style.scss"
@@ -7,7 +7,7 @@ import NavBar from "../../../containers/Home/components/NavBar"
 import Menu from "../../../containers/Home/components/Menu"
 import { Add, Remove } from "@mui/icons-material"
 import Footer from "../../../containers/Home/components/Footer"
-import { popularProducts } from "../../../services/fakeData"
+import useProducts from "../hook/useProducts"
 
 const Color = styled.div`
   width: 20px;
@@ -19,10 +19,12 @@ const Color = styled.div`
 `
 
 const Product = () => {
-  const params = useParams()
+  const { id } = useParams<any>()
   const [amount, setAmount] = useState<number>(1)
-  const currentItem = popularProducts.find((i: any) => i.id == params.id)
-  console.log(currentItem)
+  const { productDetail, getProductDetail } = useProducts()
+  useEffect(() => {
+    getProductDetail(id)
+  }, [])
   return (
     <div className="product">
       <Announcement />
@@ -32,18 +34,14 @@ const Product = () => {
       </div>
       <div className="wrapper">
         <div className="img-container">
-          <img src={currentItem?.img} alt="" />
+          <img src={productDetail?.productImgURL} alt="" />
         </div>
         <div className="info-container">
-          <h1 className="title">{currentItem?.name}</h1>
+          <h1 className="title">{productDetail?.productName}</h1>
           <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+            {productDetail?.productDescription}
           </p>
-          <span className="price">VND: {currentItem?.cost}</span>
+          <span className="price">VND: {productDetail?.productPrice}</span>
           <div className="filter-container">
             <div className="filter">
               <span className="filter-title">Color</span>
